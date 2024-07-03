@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            border:1px solid black;
+            width:300px;
+            padding:10px;
+            background-color: aqua;
+        }
+        label,input{
+            margin:5px;
+        }
+        [for="fname"]{
+            color: blueviolet;
+        }
+        [for~="doe"]
+        {
+            color:crimson
+        }
+        [for|="course"]
+        {
+            color:orange;
+        }
+        [for^="em"]
+        {
+            color:navy;
+        }
+        [for$="ne"]
+        {
+            color:gold;
+        }
+        label[for*="le"]
+        {
+            color:red;
+        }
+        [for|="add"]
+        {
+            color:forestgreen;
+        }
+        [for*="pswd"]
+        {
+            color:slateblue;
+        }
+        [value="register"]
+        {
+            color: blue;
+            text-align:center;
+            position:relative;
+            left:80px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h2>registration form</h2>
+    <form>
+        <label for="fname">first name:</label><br>
+        <input type="text" id="fname" name="fname" placeholder="jhon"/><br><br>
+        <label for="lname doe">last name:</label><br>
+        <input type="text" id="lname" name="lname" placeholder="doe"/><br><br>
+        <label for="course-list">course:</label>
+        <input type="list" list="course">
+        <datalist id="course">
+            <option value="M.Tech"></option>
+            <option value="B.Tech"></option>
+            <option value="degree"></option>                                                                                                                            
+        </datalist><br><br>
+        <label for="email">email:</label><br>
+        <input type="email" id="email" name="email" placeholder="abc@gmai.com"/><br><br>
+        <label for="phone">mobile no</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="1234567890" pattern="[10]{0-9}"/><br><br>
+        <label for="genderle">gender</label><br>
+        <input type="radio" id="male" value="male" name="gender" class="gender"/>
+        <label for="male">male</label>
+        <input type="radio" id="female" value="female" name="gender" class=""/>
+        <label for="female">female</label><br><br>
+        <label for="add-ress">Address</label><br>
+        <textarea cols="20" rows="4" name="add"></textarea><br><br>
+        <label for="pswd">password</label><br>
+        <input type="password" id="pswd" name="pswd" placeholder="enter your password"/><br><br>
+        <label for="re-pswd">re-type password</label><br>
+        <input type="password" id="re-pswd" name="re-pswd" placeholder="re-type your password"/><br><br>
+        <input type="submit" value="register"/>
+
+
+    </form>
+</body>
+</html>
